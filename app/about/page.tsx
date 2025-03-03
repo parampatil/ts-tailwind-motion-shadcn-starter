@@ -1,4 +1,4 @@
-// @/app/page.tsx
+// @/app/about/page.tsx
 'use client'
 import { motion } from 'framer-motion'
 import PageTransition from '@/components/animations/PageTransition';
@@ -8,7 +8,7 @@ const fadeIn = {
   visible: { opacity: 1, transition: { duration: 0.8 } }
 }
 
-export default function Home() {
+export default function About() {
   return (
     <PageTransition>
       <motion.div 
@@ -17,32 +17,38 @@ export default function Home() {
       animate="visible"
       variants={fadeIn}
     >
-      <main className="container m-auto px-4 py-16">
+      <main className="container mx-auto px-4 py-16">
         <motion.h1 
           className="text-4xl font-bold mb-6"
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.8 }}
         >
-          Welcome to Our Website
+          About Us
         </motion.h1>
-        <motion.p 
-          className="text-lg mb-4"
-          initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+        <motion.div 
+          className="bg-gray-100 dark:bg-gray-900 p-6 rounded-lg shadow-md mb-8"
+          initial={{ scale: 0.9, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.8 }}
         >
-          We&apos;re excited to showcase our innovative solutions and cutting-edge technology.
-        </motion.p>
+          <h2 className="text-2xl font-semibold mb-4">Our Story</h2>
+          <p className="mb-4">
+            Founded in 2023, our company has quickly grown to become a leader in innovative solutions.
+          </p>
+          <p>
+            We&apos;re passionate about leveraging technology to solve complex problems and improve lives.
+          </p>
+        </motion.div>
         <motion.div 
           className="bg-gray-100 dark:bg-gray-900 p-6 rounded-lg shadow-md"
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.8 }}
         >
-          <h2 className="text-2xl font-semibold mb-4">Our Mission</h2>
+          <h2 className="text-2xl font-semibold mb-4">Our Team</h2>
           <p>
-            To revolutionize the industry with our forward-thinking approach and dedication to excellence.
+            Our diverse team of experts brings a wealth of experience and creativity to every project.
           </p>
         </motion.div>
       </main>
