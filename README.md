@@ -1,36 +1,125 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ts-tailwind-motion-shadcn-starter
 
-## Getting Started
+A modern and flexible Next.js starter template with **TypeScript**, **Tailwind CSS**, **Framer Motion**, and **shadcn/ui**. This template is designed to help you kickstart your Next.js projects with a clean, scalable, and animated setup.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Features
+
+- **Next.js**: The React framework for production.
+- **TypeScript**: Strongly typed JavaScript for better developer experience.
+- **Tailwind CSS**: Utility-first CSS framework for rapid UI development.
+- **Framer Motion**: Smooth animations and transitions for your app.
+- **shadcn/ui**: Pre-built, accessible, and customizable UI components.
+- **Dark Mode Support**: Built-in light/dark theme toggle.
+- **Responsive Design**: Fully responsive layout with mobile-friendly navigation.
+
+---
+
+## 📂 Folder Structure
+
+ts-tailwind-motion-shadcn-starter/
+├── app/ # App Router structure
+│ ├── layout.tsx # Root layout with Navbar and ThemeProvider
+│ ├── page.tsx # Home page
+│ ├── about/ # About page
+│ ├── not-found.tsx # Custom 404 page
+├── components/ # Reusable components (Navbar, PageTransition, etc.)
+├── styles/ # Global styles (Tailwind CSS)
+├── public/ # Static assets (images, icons)
+├── README.md # Project documentation
+├── tailwind.config.ts # Tailwind CSS configuration file
+├── tsconfig.json # TypeScript configuration file
+└── package.json # Project dependencies and scripts
+
+
+---
+
+## 🛠️ Technologies Used
+
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [shadcn/ui](https://ui.shadcn.dev/)
+
+---
+
+## 📦 Installation
+
+To create a new project using this template, run the following command:
+
+```sh
+npx create-next-app@latest --example "https://github.com/parampatil/ts-tailwind-motion-shadcn-starter" your-project-name
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Replace `your-project-name` with the desired name of your project.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🖥️ Usage
 
-## Learn More
+1. Navigate to the project directory:
 
-To learn more about Next.js, take a look at the following resources:
+```sh
+cd your-project-name
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Install dependencies:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```sh
+npm install
+```
 
-## Deploy on Vercel
+3. Start the development server:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```sh
+npm run dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. Open your browser and go to `http://localhost:3000`.
+
+---
+
+## 🌟 Features in Action
+
+### Navbar:
+- Responsive navigation bar with active link highlighting.
+- Dark mode toggle button.
+
+### Page Transitions:
+- Smooth crossfade transitions between pages using Framer Motion.
+
+### 404 Page:
+- A custom "Page Not Found" screen with animations.
+
+---
+
+## 📝 Customization
+
+Feel free to customize the following files to suit your project needs:
+
+1. **Tailwind Configuration**: Modify `app/globals.css` for custom themes or plugins.
+2. **Navbar Links**: Update the `menuItems` array in `layout.tsx` to add or modify navigation links.
+3. **Animations**: Adjust animation settings in `PageTransition.tsx` or `Navbar.tsx`.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to open an issue or submit a pull request if you have suggestions or improvements.
+
+---
+
+## 🙏 Acknowledgments
+
+Special thanks to:
+- [shadcn/ui](https://ui.shadcn.dev/) for providing accessible UI components.
+- [Framer Motion](https://www.framer.com/motion/) for smooth animations.
+- [Tailwind CSS](https://tailwindcss.com/) for making styling effortless.
+
+---
+
+## 📅 Last Updated
+
+This README was last updated on **March 03, 2025**.
