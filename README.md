@@ -18,20 +18,19 @@ A modern and flexible Next.js starter template with **TypeScript**, **Tailwind C
 
 ## 📂 Folder Structure
 
+```
 ts-tailwind-motion-shadcn-starter/
-├── app/ # App Router structure
-│ ├── layout.tsx # Root layout with Navbar and ThemeProvider
-│ ├── page.tsx # Home page
-│ ├── about/ # About page
-│ ├── not-found.tsx # Custom 404 page
-├── components/ # Reusable components (Navbar, PageTransition, etc.)
-├── styles/ # Global styles (Tailwind CSS)
-├── public/ # Static assets (images, icons)
-├── README.md # Project documentation
-├── tailwind.config.ts # Tailwind CSS configuration file
-├── tsconfig.json # TypeScript configuration file
-└── package.json # Project dependencies and scripts
-
+├── app/                   # App Router structure
+│   ├── layout.tsx         # Root layout with Navbar and ThemeProvider
+│   ├── page.tsx           # Home page
+│   ├── about/             # About page
+│   ├── not-found.tsx      # Custom 404 page
+├── components/            # Reusable components (Navbar, PageTransition, etc.)
+├── styles/                # Global styles (Tailwind CSS)
+├── public/                # Static assets (images, icons)
+├── README.md              # Project documentation
+├── tsconfig.json          # TypeScript configuration file
+└── package.json           # Project dependencies and scripts
 
 ---
 
@@ -122,4 +121,4 @@ Special thanks to:
 
 ## 📅 Last Updated
 
-This README was last updated on **March 03, 2025**.
+This README was last updated on **March 04, 2025**.

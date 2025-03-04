@@ -4,9 +4,18 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
+const fadeIn = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.8 } }
+}
+
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 flex items-center justify-center px-4">
+    <motion.div 
+    initial="hidden"
+      animate="visible"
+      variants={fadeIn}
+    className="min-h-screen bg-gray-100 dark:bg-gray-900 flex items-center justify-center px-4">
       <div className="max-w-lg w-full text-center">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -37,6 +46,6 @@ export default function NotFound() {
           </Link>
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   )
 }

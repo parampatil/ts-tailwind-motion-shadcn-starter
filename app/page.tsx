@@ -1,7 +1,6 @@
 // @/app/page.tsx
 'use client'
 import { motion } from 'framer-motion'
-import PageTransition from '@/components/animations/PageTransition';
 
 const fadeIn = {
   hidden: { opacity: 0 },
@@ -10,9 +9,8 @@ const fadeIn = {
 
 export default function Home() {
   return (
-    <PageTransition>
       <motion.div 
-      className="min-h-screen bg-white dark:bg-black text-black dark:text-white"
+      className="min-h-screen h-[200vh] mt-16 bg-white dark:bg-gray-800 text-black dark:text-white"
       initial="hidden"
       animate="visible"
       variants={fadeIn}
@@ -47,6 +45,5 @@ export default function Home() {
         </motion.div>
       </main>
     </motion.div>
-    </PageTransition>
   );
 }
