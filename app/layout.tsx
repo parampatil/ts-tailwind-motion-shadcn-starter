@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/layout/theme-provider"
 import { menuItems } from "@/components/layout/MenuItems";
 import Navbar from "@/components/layout/Navbar";
 import PageTransition from "@/components/animations/PageTransition";
+import { Toaster } from "@/components/ui/sonner"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,6 +41,7 @@ export default function RootLayout({
         >
           <Navbar menuItems={menuItems} />
           <PageTransition>{children}</PageTransition>
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
