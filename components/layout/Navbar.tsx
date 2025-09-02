@@ -64,22 +64,8 @@ const Navbar: React.FC<NavbarProps> = ({ menuItems }) => {
   };
 
   const mobileMenuVariants = {
-    closed: { 
-      height: 0,
-      opacity: 0,
-      transition: {
-        height: { duration: 0.3, ease: "easeInOut" },
-        opacity: { duration: 0.2 }
-      }
-    },
-    open: { 
-      height: "auto",
-      opacity: 1,
-      transition: {
-        height: { duration: 0.3, ease: "easeInOut" },
-        opacity: { duration: 0.2, delay: 0.1 }
-      }
-    }
+    closed: { height: 0, opacity: 0, transition: { duration: 0.3 } },
+    open: { height: "auto", opacity: 1, transition: { duration: 0.3 } },
   };
 
   const hamburgerVariants = {
