@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-import { ThemeProvider } from "@/components/layout/theme-provider"
+import { ThemeProvider } from "@/components/layout/theme-provider";
 import { menuItems } from "@/components/layout/MenuItems";
 import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 import PageTransition from "@/components/animations/PageTransition";
-import { Toaster } from "@/components/ui/sonner"
+import AuthProvider from "@/components/auth/AuthProvider";
+import { Toaster } from "@/components/ui/sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,7 +22,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "ts-tailwind-motion-shadcn-starter",
-  description: "A starter template for Next.js with TypeScript, Tailwind CSS, Framer Motion, and Shadcn UI.",
+  description:
+    "A starter template for Next.js with TypeScript, Tailwind CSS, Framer Motion, and Shadcn UI.",
 };
 
 export default function RootLayout({
@@ -39,9 +42,12 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar menuItems={menuItems} />
-          <PageTransition>{children}</PageTransition>
-          <Toaster />
+          <AuthProvider>
+            <Navbar menuItems={menuItems} />
+            <PageTransition>{children}</PageTransition>
+            <Footer />
+            <Toaster />
+          </AuthProvider>
         </ThemeProvider>
       </body>
     </html>
